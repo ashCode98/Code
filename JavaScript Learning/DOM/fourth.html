@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Fourth one</title>
+</head>
+<style>
+    .bg-color{
+    background-color: black;
+    color: white;
+    font-size: 25pt;
+}
+</style>
+<body class="bg-color">
+    <ul class="languages">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    function addNewLanguageToList(languageName){
+        const li = document.createElement('li');
+        li.innerHTML = `${languageName}`;
+        document.querySelector('.languages').appendChild(li);
+    }
+    function addNewLanguageTOListOptimised(languageName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(languageName));
+        document.querySelector('.languages').appendChild(li);
+    }
+    addNewLanguageTOListOptimised("python")
+    addNewLanguageTOListOptimised("Rust")
+    addNewLanguageTOListOptimised("Typescript")
+
+    // edit list value
+    const change = document.querySelector('li:nth-child(4)');
+    // console.log(change);
+    const li = document.createElement('li')
+    li.textContent = "php"
+    change.replaceWith(li)
+
+    // edit another list value
+    const changeJS = document.querySelector('li:first-child')
+    changeJS.outerHTML = "<li>Typescript</li>"
+
+    const removeLastLanguage = document.querySelector('li:last-child')
+    removeLastLanguage.remove();
+</script>
+</html>
