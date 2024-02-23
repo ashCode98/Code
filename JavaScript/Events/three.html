@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second File</title>
+</head>
+
+<body>
+    <h1>Hi there, Ashish this side</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+
+<script>
+    const start = document.getElementById('Start')
+    const stop = document.getElementById('Stop')
+
+    const startInterval = setInterval(() => {
+        console.log("started");
+    }, 2000);
+    start.addEventListener("click", () => startInterval);
+
+    stop.addEventListener("click", () => {
+        console.log("Stopped Interval");
+        clearInterval(startInterval)
+    })
+    // stop.addEventListener( "click", ()=>{
+    //      clearInterval(startInterval);
+    // } )
+
+</script>
+
+</html>

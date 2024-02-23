@@ -48,21 +48,23 @@ const Comments = ({ postId }) => {
         <button onClick={handleClick}>Send</button>
       </div>
       {error
-        ? "Something went wrong"
-        : isLoading
-        ? "loading"
-        : data.map((comment) => (
-            <div className="comment">
-              <img src={"/upload/" + comment.profilePic} alt="" />
-              <div className="info">
-                <span>{comment.name}</span>
-                <p>{comment.desc}</p>
-              </div>
-              <span className="date">
-                {moment(comment.createdAt).fromNow()}
-              </span>
-            </div>
-          ))}
+  ? "Something went wrong"
+  : isLoading
+  ? "loading"
+  : Array.isArray(data)
+  ? data.map((comment) => (
+      <div className="comment">
+        <img src={"/upload/" + comment.profilePic} alt="" />
+        <div className="info">
+          <span>{comment.name}</span>
+          <p>{comment.desc}</p>
+        </div>
+        <span className="date">
+          {moment(comment.createdAt).fromNow()}
+        </span>
+      </div>
+    ))
+  : "Unexpected error: data is not an array"}
     </div>
   );
 };
