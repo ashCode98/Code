@@ -26,16 +26,14 @@ const Register = () => {
     }
   };
 
-  console.log(err)
+  console.log(err);
 
   return (
     <div className="register">
       <div className="card">
         <div className="left">
           <h1>Social Share</h1>
-          <p>
-            let's connect with each others.
-          </p>
+          <p>let's connect with each others.</p>
           <span>Do you have an account?</span>
           <Link to="/login">
             <button>Login</button>
@@ -68,7 +66,7 @@ const Register = () => {
               name="name"
               onChange={handleChange}
             />
-            {err && err}
+            {err && <div>{JSON.stringify(err)}</div>}
             <button onClick={handleClick}>Register</button>
           </form>
         </div>

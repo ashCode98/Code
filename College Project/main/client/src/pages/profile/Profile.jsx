@@ -61,6 +61,8 @@ const Profile = () => {
     <div className="profile">
       {isLoading ? (
         "loading"
+      ) : data && typeof data === "object" && data.code && data.fatal ? (
+        <div>Error: {data.code}</div>
       ) : (
         <>
           <div className="images">
