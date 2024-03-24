@@ -7,6 +7,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "../../context/darkModeContext";
@@ -14,7 +15,11 @@ import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, logout } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout();
+  };
 
   return (
     <div className="navbar">
@@ -22,7 +27,11 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>socialShare</span>
         </Link>
-        <HomeOutlinedIcon />
+
+        <Link to="/">
+          <HomeOutlinedIcon />
+        </Link>
+
         {darkMode ? (
           <WbSunnyOutlinedIcon onClick={toggle} />
         ) : (
@@ -35,12 +44,19 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
-        <PersonOutlinedIcon />
+        <Link to={`/profile/${currentUser.id}`}>
+          <PersonOutlinedIcon />
+        </Link>
+
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
+        <LogoutOutlinedIcon onClick={handleLogout} />
+
         <div className="user">
           {typeof currentUser?.profilePic === "string" && (
-            <img src={"/upload/" + currentUser.profilePic} alt="" />
+            <Link to={`/profile/${currentUser.id}`}>
+              <img src={"/upload/" + currentUser.profilePic} alt="" />
+            </Link>
           )}
           {typeof currentUser?.name === "string" && (
             <span>{currentUser.name}</span>
