@@ -1,0 +1,114 @@
+body {
+    background-color: #EAEFF1;
+}
+
+img {
+    width: 280px;
+    height: 220px;
+    border-radius: 5%;
+    display: block;
+    margin-left: 8.5;
+    margin-top: 8;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+}
+
+.Nature {
+    font-size: 18;
+    color: #797A7B;
+    width: 64px;
+    height: 25px;
+    margin-left: 25px;
+    border: 1px solid #8A8B90;
+    border-radius: 20px;
+    margin-top: 21px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+
+.Lake {
+    font-size: 18;
+    color: #797A7B;
+    width: 64px;
+    height: 25px;
+    margin-left: 2px;
+    margin-right: 130;
+    border: 1px solid #8A8B90;
+    border-radius: 20px;
+    margin-top: 21px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+h2 {
+    margin-left: 18;
+    margin-top: 73;
+    font-size: 23px;
+}
+
+p {
+    margin-left: 14;
+    color: #8A8B90;
+}
+
+div {
+    background-color: white;
+    border-radius: 3%;
+    border: 1px solid white;
+    width: 300px;
+    height: 520px;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.read-more {
+    width: 140px;
+    height: 9%;
+    position: relative;
+    bottom: -5;
+    left: 40%;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: #E0EFFF;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 2px solid E0EFFF;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
