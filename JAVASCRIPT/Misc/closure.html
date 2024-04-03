@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Closure</title>
+</head>
+
+<body>
+	<button id="black" style="font-size: 30px; padding: 5px 10px;">Black</button>
+	<button id="blue" style="font-size: 30px; padding: 5px 10px;">Blue</button>
+	<button id="yellow" style="font-size: 30px; padding: 5px 10px;">Yellow</button>
+	<button id="red" style="font-size: 30px; padding: 5px 10px;">Red</button>
+</body>
+
+<script>
+
+	// function any() {
+	// 	let username = "user1";
+
+	// 	function innerFunction1() {
+	// 		let password = "pwd"
+	// 		console.log(username); //output: user1
+	// 	}
+
+	// 	function innerFunction2() {
+	// 		console.log(password);//output: password is not defined
+	// 	}
+
+	// 	innerFunction1()
+	// 	innerFunction2()
+	// 	/* child-to-child sharing is not possible */
+	// 	/* child have access to parent's properties and methods */
+	// }
+	// any()
+	// // console.log(username) //output: username is not defined 
+
+	// document.getElementById('black').onclick = function(){
+	// 	document.body.style.backgroundColor = 'black'
+	// }
+
+	// document.getElementById('blue').onclick = function(){
+	// 	document.body.style.backgroundColor = 'blue'
+	// }
+
+	function handleClick(value) {
+
+		/*return the whole lexical scope including inner function and outer function*/
+		return function () {
+			document.body.style.backgroundColor = `${value}`
+		}
+	}
+
+	document.getElementById('black').onclick = handleClick('black')
+	document.getElementById('blue').onclick = handleClick('blue')
+
+</script>
+
+</html>
