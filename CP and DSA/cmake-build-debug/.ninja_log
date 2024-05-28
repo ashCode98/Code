@@ -1,0 +1,15 @@
+# ninja log v5
+18	1911	7384815285172668	CMakeFiles/CP_and_DSA.dir/DSA/Array/Medium/75_sort_colors.cpp.obj	3aa79fa77576daf2
+22	1930	7384815285376838	CMakeFiles/CP_and_DSA.dir/DSA/Array/Medium/sub_arrays.cpp.obj	1db50a31a23cb015
+47	1959	7384815285640800	CMakeFiles/CP_and_DSA.dir/DSA/Strings/151_reverse_words.cpp.obj	3b768ed050011410
+31	1974	7384815285813912	CMakeFiles/CP_and_DSA.dir/DSA/Binary_Search/lower_bound.cpp.obj	a5784bb9b6c5e2dd
+9	1975	7384815285823924	CMakeFiles/CP_and_DSA.dir/DSA/Array/Medium/2149_rearrange_ele.cpp.obj	fc3223150ff00d07
+42	1976	7384815285837549	CMakeFiles/CP_and_DSA.dir/DSA/Binary_Search/single_element_sorted_array.cpp.obj	a5be96fbc183166
+13	1984	7384815285927836	CMakeFiles/CP_and_DSA.dir/DSA/Array/Medium/31_next_permutation.cpp.obj	d46650cc168d2218
+27	1990	7384815285987851	CMakeFiles/CP_and_DSA.dir/DSA/Binary_Search/first_and_last_occur.cpp.obj	ae52dad5529f1501
+37	1991	7384815285987851	CMakeFiles/CP_and_DSA.dir/DSA/Binary_Search/recursive_binary_search.cpp.obj	9491eea1ec7a951e
+14	1379	7384817476627118	CMakeFiles/CP_and_DSA.dir/DSA/Strings/151_reverse_words.cpp.obj	3b768ed050011410
+19	411	7384817590845846	CMakeFiles/CP_and_DSA.dir/DSA/Strings/20_validness.cpp.obj	7cd3f177ea4e579f
+15	1344	7384817600097696	CMakeFiles/CP_and_DSA.dir/DSA/Strings/151_reverse_words.cpp.obj	3b768ed050011410
+20	426	7384826211807314	CMakeFiles/CP_and_DSA.dir/DSA/Strings/20_validness.cpp.obj	7cd3f177ea4e579f
+15	1385	7384826221381839	CMakeFiles/CP_and_DSA.dir/DSA/Strings/151_reverse_words.cpp.obj	3b768ed050011410

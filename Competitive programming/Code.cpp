@@ -1,37 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve()
-{
-    int n;
-    cin >> n;
-    vector<int> arr(n, 0);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    
-    sort(arr.begin(), arr.end()); //sort all the atheles with strength
-    
-    int finalAnswer = INT_MAX;
-    
-    for(int i = 1; i<n; i++){
-    	int diff = abs(arr[i] - arr[i-1]);
-    	if(diff < finalAnswer){
-    		finalAnswer = diff;
-    	}
-    }
-    
-    cout << finalAnswer << endl;
-}
+void solve(){}
 
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
-    }
+	int cnt = 0;
+	string s;
+	cin >> s;
+	string ans = "";
+	
+	for(int i = 0; i<s.size(); i++){
+		if(s[i] == ')'){
+			cnt--;
+		}
+		cout << cnt << " ";
+		if(cnt != 0){
+			ans.push_back(s[i]);
+		}
+		if(s[i] == '('){
+			cnt++;
+		}
+		// cout << "after statement:" << cnt << " ";
+	}   
+	
+	// cout << ans;
     return 0;
 }
