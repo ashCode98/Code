@@ -1,3 +1,0 @@
-F:/Code/CP and DSA/cmake-build-debug/CMakeFiles/CP_and_DSA.dir
-F:/Code/CP and DSA/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/Code/CP and DSA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
