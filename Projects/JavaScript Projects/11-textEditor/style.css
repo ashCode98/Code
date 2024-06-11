@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  padding: 6rem;
+  padding: 2rem;
   background: black;
 }
 
@@ -27,7 +27,8 @@ body {
 }
 
 .input-container input {
-  width: 80%;
+  text-align: center;
+  width: 50%;
   padding: 10px;
   margin-bottom: 20px;
   outline: none;

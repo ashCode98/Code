@@ -2,15 +2,28 @@
 using namespace std;
 
 int main() {
-    deque<int> q;
-    q.push_front(1);
-    q.push_front(2);
-    q.push_front(3);
-    q.push_front(4);
+	string s = "paper";
+	string t = "title";
+	
+	unordered_map<char, int>mp1, mp2;
 
-    q.pop_front();
+        for(int i = 0; i<s.size(); i++){
+            mp1[s[i]] = i+1;
+            mp2[t[i]] = i+1;
+        }
 
-    for(auto i: q){
-        cout << i << " ";
-    }
-}
+		for(int i = 0; i<s.size(); i++){
+			cout << mp1[s[i]] << ' ';
+		}
+		cout << endl;
+		for(int i = 0; i<s.size(); i++){
+			cout << mp2[t[i]] << ' ';
+		}
+
+        // for(int i = 0; i<s.size(); i++){
+            // if(mp1[s[i]] != mp2[t[i]]){
+                // return false;
+            // }
+        // }
+        // return true;
+}	
