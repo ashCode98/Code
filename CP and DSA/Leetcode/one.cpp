@@ -1,18 +1,17 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    string s = "abcde";
-    string goal = "cdeab";
+int main()
+{
+    int hash[27];
 
-    string su = s+s;
+    string s = "tree";
 
-    for (int i = 0; i < su.size(); i++){
-        for (int len = 1; len <= su.size()-i;  len++){
-            if(s.substr(i, len) == goal){
-                return true;
-            }
-        }
+    for(int i = 0; i<s.size(); i++){
+        hash[s[i]]++;
     }
-    return false;
+
+    for(int i = 0; i<26; i++){
+        cout << hash[i] << endl;
+    }
 }
