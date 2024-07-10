@@ -54,14 +54,16 @@ li {
 .rec {
     border: 2px solid;
     border-radius: 10px;
-    margin: 30px 399px;
+    margin: 30px 309px;
     padding: 100px;
     text-align: center;
+    overflow: auto;
 }
 
 img {
-    /* float: right; */
-    align-items: center;
+    padding-left: 80vw;
+    position: fixed;
+    bottom: 150px;
 }
 
 footer {
