@@ -1,0 +1,28 @@
+img {
+    width: 174.43px;
+    height: 55.9px;
+}
+
+* {
+    font-family: 'sf pro display';
+    font-size: 16px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 19.7px 146.5px;
+}
+
+.content ul {
+    list-style: none;
+    display: flex;
+    margin: 17px 63px;
+    text-decoration: none;
+}
+
+.content ul li a {
+    padding: 0px 20px;
+    text-decoration: none;
+    color: black;
+}
