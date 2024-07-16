@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    string s;
+    cin >> s;
+
+    cout << ((int)s.size()-1)*9 + (s[0]-'0') << endl;
+}
+
+int main(){
+
+	long long test;
+	cin >> test;
+
+	while(test--){
+		solve();
+	}
+}

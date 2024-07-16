@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define endl '\n'
+
+void solve(){
+	
+    ll n, topMost, bottomMost, a, b;
+    cin >> n >> topMost;
+
+    bottomMost = 7 - topMost;
+
+    bool ans = true;
+
+    while(n--){
+        
+        cin >> a >> b;
+
+        if(a == bottomMost || a == topMost) ans = false;
+
+        if(b == bottomMost || b == topMost) ans = false;
+    
+    }
+
+    if(ans == false) {cout << "NO";}
+    else {cout << "YES";}	
+}
+
+int main(){
+
+    int t = 1;
+    // cin >> t;
+    while(t--){
+    	solve();
+    }
+
+}

@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+double pi = 3.141592654;
+
+void solve(){
+    double d, h, v, e;
+    cin >> d >> h >> v >> e;
+
+    double rain = e * pi * (d/2) * (d/2);
+
+    if(rain > v){
+    	cout << "NO" << endl;
+    }
+    else{
+    	cout << "YES" << endl;
+
+    	double begin_rain = pi * (d/2) * (d/2) * h;
+
+    	cout << setprecision(12) << begin_rain/(v-rain);
+    }
+}
+
+int main(){
+	
+    int t = 1;
+    // cin >> t;
+
+    while(t--){
+    	solve();
+    }
+} 

@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define endl '\n'
+
+void solve(){
+    string s1, s2;
+    cin >> s1 >> s2;
+
+    int leftWeight = 0, rightWeight = 0;
+    for(int i = 0; i<(int)s1.size(); i++){
+        leftWeight++;
+        if(s1[i] == '|')break;
+    }
+  
+    rightWeight = (int)s1.size() - leftWeight;
+
+    leftWeight--;
+
+    int n = (int)s2.size(), i = 0;
+    while(n--){
+        if(leftWeight <= rightWeight){
+            s1 = s2[i] + s1;
+            leftWeight++;
+        }
+        else{
+            s1 = s1 + s2[i];
+            rightWeight++;
+        }
+        i++;
+    }
+
+    if(leftWeight == rightWeight){
+        cout << s1;
+    }
+    else{
+        cout << "Impossible";
+    }
+
+}
+
+int main(){
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+
+    int t = 1;
+    // cin >> t;
+    while(t--){
+    	solve();
+    }
+    
+}

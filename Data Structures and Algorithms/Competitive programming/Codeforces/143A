@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define endl '\n'
+
+int r1, r2, c1, c2, d1, d2;
+
+void solve(){
+
+    cin >> r1 >> r2 >> c1 >> c2 >> d1 >> d2;
+
+    int one = 0, two = 0, three = 0, four = 0;
+
+    for(int i = 0; i<10; i++){
+        for(int j = 0; j<10; j++){
+            for(int k = 0; k<10; k++){
+                for(int l = 0; l<10; l++){
+                    if(i+j == r1 && k+l == r2 && i+k == c1 && j+l == c2 && i+l == d1 && j+k == d2){
+                        one = i, two = j, three = k, four = l;
+                    }
+                }
+            }
+        }
+    }
+
+    if(one == two || one == three || one == four || two == three || two == four || three == four || one < 1 || one > 9 || two < 1 || two > 9 || three < 1 || three > 9 || four < 1 || four > 9){
+        cout << -1;
+    }
+    else{
+        cout << one << " " << two << endl << three << " " << four;
+    }
+}
+
+int main(){
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+
+    int t = 1;
+    // cin >> t;
+    while(t--){
+    	solve();
+    }
+    
+}

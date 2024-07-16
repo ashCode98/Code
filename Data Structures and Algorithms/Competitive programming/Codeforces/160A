@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+	int n;
+	cin >> n;
+	int arr[n];
+	int sum = 0;
+	for(int i = 0; i<n; i++){
+		cin >> arr[i];
+		sum += arr[i];
+	}
+
+	sort(arr, arr + n, greater<int>()); //sorted in descending order
+
+    int temp = 0, ans = 0;
+	for(int i = 0; i<n; i++){
+        temp += arr[i];
+        ans++;
+        if(temp > sum/2){ // iterate till the temp is less than the sum/2
+        	break;
+        }
+	}
+
+	cout << ans;
+}
+
+int main(){
+	int t = 1;
+	while(t--){
+		solve();
+	}
+}

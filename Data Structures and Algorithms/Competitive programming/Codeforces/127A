@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+double encounter(double a, double b, double x, double y){
+    return sqrt(pow(a-x, 2) + pow(b-y, 2));
+}
+
+void solve(){
+	int n, k;
+	cin >> n >> k;
+	double ll = 0;
+	double a, b;
+	cin >> a >> b;
+ 
+    double x, y;
+	for(int i = 0; i<n-1; i++){
+		cin >> x >> y;
+
+		ll += encounter(a, b, x, y);
+		a = x;
+		b = y;
+	}
+
+	cout << setprecision(12) << double(ll*k)/50 << endl;
+}
+
+int main(){
+	int t = 1;
+	// cin >> t;
+	while(t--){
+		solve();
+	}
+} 
