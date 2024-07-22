@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+    <style>
+        .container {
+            border: 2px solid #663399;
+            background-color: rebeccapurple;
+            width: 70px;
+            height: 70px;
+            transition: 4s;
+        }
+
+        .container .box {
+            border: 2px solid lightcoral;
+            background-color: lightcoral;
+            width: 10px;
+            height: 10px;
+            transition: 2px;
+        }
+
+        .container .box:hover {
+            width: 66px;
+            height: 66px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
