@@ -6,32 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Transition</title>
     <style>
-        .container {
+        /* .container {
             border: 2px solid #663399;
             background-color: rebeccapurple;
-            width: 70px;
-            height: 70px;
-            transition: 4s;
+            width: 400px;
+            height: 200px;
         }
 
         .container .box {
-            border: 2px solid lightcoral;
-            background-color: lightcoral;
-            width: 10px;
-            height: 10px;
-            transition: 2px;
+            border: 2px solid lightgreen;
+            background-color: lightgreen;
+            width: 30px;
+            height: 30px;
+            transition-property: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
         }
 
-        .container .box:hover {
-            width: 66px;
-            height: 66px;
+        .translate {
+            transform: translateX(10vw) translateY(10vh);
+        } */
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 270px 43vw;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border-radius: 7px;
+            font-size: 30px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scaleX(1.2) scaleY(1.2);
+            background-color: blue;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="box"></div>
+    <!-- <div class="container">
+        <div class="box translate"></div>
+    </div> -->
+    <div class="box">
+        Hover
     </div>
 </body>
 
