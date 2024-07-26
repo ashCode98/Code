@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        .container {
+            width: 60vw;
+            height: 40vh;
+            background-color: blue;
+            position: relative;
+        }
+
+        .box {
+            width: 70px;
+            height: 70px;
+            background-color: red;
+            border-radius: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation-name: Bounce;
+            animation-duration: 7s;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes Bounce {
+            0% {
+                left: 0;
+                bottom: 0;
+            }
+
+            25% {
+                left: calc(25% - 70px);
+                bottom: 50%;
+            }
+
+            50% {
+                left: calc(50% - 70px);
+                bottom: 0;
+            }
+
+            75% {
+                left: calc(75% - 70px);
+                bottom: 50%;
+            }
+
+            100% {
+                left: calc(100% - 70px);
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
