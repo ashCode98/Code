@@ -5,11 +5,12 @@
 
 :root {
     --border-bottom: 8px solid rgb(56, 54, 54);
+    --bg-color: black;
 }
 
 .homepage {
     display: flex;
-    background-color: black;
+    background-color: var(--bg-color);
 }
 
 .nav {
@@ -60,7 +61,6 @@
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    /* width: 200px; */
     height: 25px;
     display: flex;
     justify-content: center;
@@ -74,7 +74,6 @@
     padding: 30vh 37vh;
     text-align: center;
     z-index: 1;
-    /* text-indent: 50%; */
 }
 
 .homepage .content h1 {
@@ -125,7 +124,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: var(--bg-color);
     border-bottom: var(--border-bottom);
 }
 
@@ -148,12 +147,8 @@
 
 .run-video {
     position: relative;
-
     width: 800px;
-    /* adjust to your image's width */
-
     height: 600px;
-    /* adjust to your image's height */
 }
 
 .run-video video {
@@ -164,7 +159,6 @@
     height: 60%;
     object-fit: cover;
     z-index: 1;
-    /* ensure video is on top of the image */
 }
 
 .run-video img {
@@ -176,7 +170,7 @@
 }
 
 .third-part {
-    background-color: black;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,7 +190,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: var(--bg-color);
     padding: 20px 50px;
     border-bottom: var(--border-bottom);
 }
@@ -225,7 +219,7 @@
 }
 
 .fifth-part {
-    background-color: black;
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,7 +241,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: black;
+    background-color: var(--bg-color);
     border-bottom: var(--border-bottom);
 }
 
@@ -282,7 +276,7 @@
 }
 
 footer {
-    background-color: black;
+    background-color: var(--bg-color);
     padding: 50px 10vw;
 }
 
@@ -309,10 +303,8 @@ footer #lang-sel {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    /* width: 200px; */
     height: 23px;
     width: 90px;
-    /* margin: 0px 633px; */
     padding: 2px 10px;
     text-wrap: nowrap;
     font-weight: 600;
