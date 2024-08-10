@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5, 5, 101, 0.824);
+}
+
+.box {
+    width: 325px;
+    height: 240px;
+    background: white;
+    border-radius: 3.4px;
+    -webkit-border-radius: 3.4px;
+    -moz-border-radius: 3.4px;
+    -ms-border-radius: 3.4px;
+    -o-border-radius: 3.4px;
+    padding: 16px 19px ;
+}
+
+.box h2 {
+    font-size: 18px;
+    font-family: "Cascadia Code";
+    margin: 8px 0px;
+}
