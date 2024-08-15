@@ -64,7 +64,7 @@ const questions = [
   },
 ];
 
-import 
+import
 
 const q = document.querySelector("p");
 const answerBtn = document.querySelector(".op");

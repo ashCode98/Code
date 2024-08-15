@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ll long long 
+#define ll long long
 #define endl '\n'
 
 void solve(){
@@ -10,7 +10,7 @@ void solve(){
     string s; cin >> s;
     vector<int> pre(n, 0), suff(n, 0);
     set<char> set;
-    
+
     for(int i = 0; i<n; i++){
         set.insert(s[i]); //from left to right
         pre[i] = set.size(); //store the increasing size of set

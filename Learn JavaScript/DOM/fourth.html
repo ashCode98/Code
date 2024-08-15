@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <title>Fourth one</title>
 </head>
 <style>
-    .bg-color{
-    background-color: black;
-    color: white;
-    font-size: 25pt;
-}
+    .bg-color {
+        background-color: black;
+        color: white;
+        font-size: 25pt;
+    }
 </style>
+
 <body class="bg-color">
     <ul class="languages">
         <li>Javascript</li>
@@ -17,12 +19,12 @@
 </body>
 
 <script>
-    function addNewLanguageToList(languageName){
+    function addNewLanguageToList(languageName) {
         const li = document.createElement('li');
         li.innerHTML = `${languageName}`;
         document.querySelector('.languages').appendChild(li);
     }
-    function addNewLanguageTOListOptimised(languageName){
+    function addNewLanguageTOListOptimised(languageName) {
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(languageName));
         document.querySelector('.languages').appendChild(li);
@@ -45,4 +47,5 @@
     const removeLastLanguage = document.querySelector('li:last-child')
     removeLastLanguage.remove();
 </script>
+
 </html>

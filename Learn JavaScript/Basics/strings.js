@@ -1,4 +1,4 @@
-const fullName  = "Prajapati-Ashish"
+const fullName = "Prajapati-Ashish"
 
 // console.log(`My first name is ${firstName} and my middle name is ${middleName}`)
 

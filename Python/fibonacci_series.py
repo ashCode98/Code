@@ -10,6 +10,6 @@ if n <= 0 :
     print("Please enter a positive integer")
 else :
     print("Fibonacci sequence: ")
-    
+
     for i in range(n) :
         print(recursion_fibo(i))

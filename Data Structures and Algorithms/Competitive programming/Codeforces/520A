@@ -14,7 +14,7 @@ void solve(){
 			temp[i] += 32;
 		}
 	}
-    
+
     sort(temp.begin(), temp.end());
 
     string ans = "";

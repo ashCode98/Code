@@ -14,7 +14,7 @@ const randomNumber = function () {
 let change;
 const startChanging = function () {
 
-    change = setInterval(function(){
+    change = setInterval(function () {
         document.body.style.backgroundColor = randomNumber();
     }, 1000)
 

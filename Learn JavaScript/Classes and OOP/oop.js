@@ -37,7 +37,7 @@ function User(username, loginCount, isLoggedIn) {
     this.loginCount = loginCount
     this.isLoggedIn = isLoggedIn
 
-    this.greeting = function(){
+    this.greeting = function () {
         console.log(`Hello ${this.username}! How are you?`)
     }
 

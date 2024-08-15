@@ -1,15 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ll long long 
+#define ll long long
 #define endl '\n'
 
 void solve(){
     ll n, target; cin >> n >> target;
-    
+
     vector<ll> v(n+1);
     for(ll i = 1; i<=n; i++)cin >> v[i];
-    
+
     ll cell = 1;
     while(cell < target){
         cell += v[cell];

@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Third file of the DOM</title>
 </head>
 <style>
-    .bg-color{
+    .bg-color {
         background-color: black;
         color: white;
         font-size: 27pt;
     }
 </style>
+
 <body class="bg-color">
 
 </body>
 
 <script>
-      const p_tag = document.createElement('p');
-      p_tag.setAttribute('class', 'main')
-      p_tag.style.backgroundColor = "blue"
-      p_tag.style.padding = "10px";
-      const text = document.createTextNode("For the sake of optimization")
-      p_tag.appendChild(text);
+    const p_tag = document.createElement('p');
+    p_tag.setAttribute('class', 'main')
+    p_tag.style.backgroundColor = "blue"
+    p_tag.style.padding = "10px";
+    const text = document.createTextNode("For the sake of optimization")
+    p_tag.appendChild(text);
 
-      document.body.appendChild(p_tag)
+    document.body.appendChild(p_tag)
 </script>
+
 </html>

@@ -1,13 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
-#define ll long long 
+
+#define ll long long
 #define endl '\n'
 
 void solve(){
     ll n, m; cin >> n >> m;
     string s1, s2; cin >> s1 >> s2;
-    
+
     reverse(s2.begin(), s2.end());
 
     s1 += s2;
@@ -24,7 +24,7 @@ void solve(){
 int main(){
 	ios_base::sync_with_stdio(false);
     cin.tie(NULL);
- 
+
 	int testcase = 1;
     cin >> testcase;
 	while(testcase--){

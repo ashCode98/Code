@@ -13,7 +13,7 @@ void solve(){
         leftWeight++;
         if(s1[i] == '|')break;
     }
-  
+
     rightWeight = (int)s1.size() - leftWeight;
 
     leftWeight--;
@@ -51,5 +51,5 @@ int main(){
     while(t--){
     	solve();
     }
-    
+
 }

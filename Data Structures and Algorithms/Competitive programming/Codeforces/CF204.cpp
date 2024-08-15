@@ -22,11 +22,11 @@ void solve(){
 
     if(oddCnt.size() >= 3){
         cout << "YES" << endl;
-        cout << oddCnt[0] << " " << oddCnt[1] << " " << oddCnt[2] << endl; 
+        cout << oddCnt[0] << " " << oddCnt[1] << " " << oddCnt[2] << endl;
     }
     else if(oddCnt.size() >= 1 && evenCnt.size() >= 2){
         cout << "YES" << endl;
-        cout << oddCnt[0] << " " << evenCnt[0] << " " << evenCnt[1] << endl; 
+        cout << oddCnt[0] << " " << evenCnt[0] << " " << evenCnt[1] << endl;
     }
     else{
         cout << "No" << endl;

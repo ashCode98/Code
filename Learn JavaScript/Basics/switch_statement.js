@@ -1,6 +1,6 @@
 const age = 20
 
-switch (age){
+switch (age) {
     case 17:
         console.log("You can't drive bro")
         break;

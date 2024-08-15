@@ -12,7 +12,7 @@
 
 
 function log(inputFunction) {
-    return function(...args) {
+    return function (...args) {
         // console.log("Input", args);
         const result = inputFunction(...args);
         console.log("Output", result);

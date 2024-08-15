@@ -21,10 +21,10 @@ void solve(){
 	}
 
 	cout << (n - tmp + k)/k << endl;
-} 
+}
 
 int main(){
-	
+
 	int t;
 	cin >> t;
 

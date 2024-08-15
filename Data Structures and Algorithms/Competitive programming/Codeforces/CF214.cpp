@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ll long long 
+#define ll long long
 #define endl '\n'
 
 void solve(){
     int n; cin >> n;
     vector<ll> v(n);
     for(int i = 0; i<n; i++) cin >> v[i];
-    
+
     reverse(v.begin(), v.end());
     for(int i = 0; i<n; i++){
         if(v[i] <= v[i+1]){

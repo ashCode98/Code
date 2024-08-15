@@ -15,7 +15,7 @@ void solve(){
     }
 
     sort(arr, arr + n);
-    
+
     ll ansCnt = 0;
     for(int i = 0; i<n; i++){
     	if(arr[i] == 1 && arr[i+1] == 1){
@@ -26,7 +26,7 @@ void solve(){
     		ansCnt++;
     	}
     }
-    
+
     cout << ansCnt;
 }
 

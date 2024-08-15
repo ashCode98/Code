@@ -1,4 +1,4 @@
-function printAshish(){
+function printAshish() {
    console.log("Ashish")
 }
 
@@ -33,7 +33,7 @@ handleObject(userInformation)
 
 const temporaryArray = [100, 200, 300, 400]
 
-function temporaryFunction(passArray){
+function temporaryFunction(passArray) {
    return passArray[2]
 }
 

@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ll long long 
+#define ll long long
 #define endl '\n'
 
 ll n, m;
@@ -25,7 +25,7 @@ void solve(){
 		}
 	}
 	cout << count;
-	
+
 
 }
 

@@ -4,7 +4,7 @@ using namespace std;
 void solve(){
 	int n;
 	cin >> n;
-	
+
 	string s, ans;
 	cin >> s;
 	ans = s;

@@ -54,7 +54,7 @@ input {
   color: #000;
 }
 
-#book-list > section {
+#book-list>section {
   display: flex;
   align-items: center;
   text-align: center;

@@ -5,7 +5,7 @@
 
 */
 
-let randomNumber = Math.random()*100;
+let randomNumber = Math.random() * 100;
 let a = prompt("Enter your first number: ");
 let b = prompt("Enter your second number: ");
 let c = prompt("Enter Operation you want to perform: ");
@@ -17,11 +17,11 @@ let wrongOperation = {
     "/": "*"
 }
 
-if(randomNumber <= 10){
+if (randomNumber <= 10) {
     //perform wrong operation
     c = wrongOperation[c];
 }
-else{
+else {
     //perform right operation
     alert(eval(`${a} ${c} ${b}`));
 }

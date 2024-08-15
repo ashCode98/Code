@@ -48,7 +48,7 @@ DevOps.__proto__ = Developer
 
 let username = "Ashish     "
 
-String.prototype.trueLength = function(){
+String.prototype.trueLength = function () {
     console.log(`${this.trim().length}`)
 }
 

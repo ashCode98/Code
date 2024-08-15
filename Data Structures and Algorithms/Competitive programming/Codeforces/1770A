@@ -7,7 +7,7 @@ using namespace std;
 void solve(){
 	ll n, m;
 	cin >> n >> m;
-  
+
     vector<ll> a(n+m);
 
 	for(ll i = 0; i<n+m; i++){
@@ -17,7 +17,7 @@ void solve(){
 	sort(a.begin(), a.end()-1);
 	reverse(a.begin(), a.end());
 
-    ll ans = 0;  
+    ll ans = 0;
 	for(ll i = 0; i<n; i++){
 		ans += a[i];
 	}

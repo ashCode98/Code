@@ -35,10 +35,10 @@ void solve(){
 }
 
 int main(){
-    
+
     ll t = 1;
     while(t--){
         solve();
     }
-        
+
 }

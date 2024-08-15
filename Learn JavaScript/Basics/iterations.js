@@ -17,6 +17,6 @@ const books = [
 
 //or
 
-const printValues = books.filter( (bookData) => bookData.genre === 'Non-Fiction')
+const printValues = books.filter((bookData) => bookData.genre === 'Non-Fiction')
 
 console.log(printValues)

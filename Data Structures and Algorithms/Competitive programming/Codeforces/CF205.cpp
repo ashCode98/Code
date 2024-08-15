@@ -4,7 +4,7 @@ using namespace std;
 void solve(){
 	int k, n;
 	cin >> k >> n;
-	
+
 	vector<int> v(n);
 
 	v[0] = 1;

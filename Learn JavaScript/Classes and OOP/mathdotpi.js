@@ -7,7 +7,7 @@ const Descriptor = Object.getOwnPropertyDescriptor(Math, "PI")
   writable: false,
   enumerable: false,
   configurable: false
-} 
+}
 */
 
 const user = {
@@ -21,7 +21,7 @@ const user = {
 }
 
 // console.log(Object.getOwnPropertyDescriptor(user, "email"))
-/* 
+/*
 {
 	value: 'user@gmail.com',
 	writable: true,

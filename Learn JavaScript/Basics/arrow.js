@@ -16,13 +16,13 @@ const temporary = () => {    //it is called arrow function
 */
 
 const sumOfTwoNumbers = (num1, num2) => {
-    return num1+num2
+    return num1 + num2
 }
 
 // const sumOfTwoNumbers = (num1, num2) => (num1+num2)
 
-function sumOfTwoNumbers(num1, num2){
-    return num1+num2
+function sumOfTwoNumbers(num1, num2) {
+    return num1 + num2
 }
 
 console.log(sumOfTwoNumbers(4, 8))
