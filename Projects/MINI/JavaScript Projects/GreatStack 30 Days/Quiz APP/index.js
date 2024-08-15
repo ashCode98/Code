@@ -64,6 +64,8 @@ const questions = [
   },
 ];
 
+import 
+
 const q = document.querySelector("p");
 const answerBtn = document.querySelector(".op");
 const next_btn = document.querySelector("#next-btn");
@@ -98,6 +100,10 @@ function showQuestion() {
   currentQuestionIndex++;
 }
 
+function newThing() {
+
+}
+
 function handleAns(index, isCorrect) {
   if (isCorrect == true) {
     userScore++;
@@ -130,3 +136,5 @@ function yourScore() {
 }
 
 startQuiz();
+
+console.log("Good is everything")
