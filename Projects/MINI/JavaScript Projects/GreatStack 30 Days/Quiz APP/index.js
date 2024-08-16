@@ -62,15 +62,65 @@ const questions = [
       { text: "Peso", correct: false },
     ],
   },
+  {
+    question: "What is the square root of 144?",
+    answers: [
+      { text: "10", correct: false },
+      { text: "11", correct: false },
+      { text: "12", correct: true },
+      { text: "14", correct: false },
+    ]
+  },
+  {
+    question: "HTTP stands for what?",
+    answers: [
+      { text: "HyperText Transfer Protocol", correct: true },
+      { text: "High Transfer Text Protocol", correct: false },
+      { text: "HyperText Translation Protocol", correct: false },
+      { text: "High Transmission Text Protocol", correct: false },
+    ]
+  },
+  {
+    question: "What does CPU stand for in computing?",
+    answers: [
+      { text: "Central Process Unit", correct: false },
+      { text: "Central Processing Unit", correct: true },
+      { text: "Computer Personal Unit", correct: false },
+      { text: "Central Programming Unit", correct: false },
+    ]
+  },
+  {
+    question: "What is the time complexity of binary search?",
+    answers: [
+      { text: "O(n)", correct: false },
+      { text: "O(log n)", correct: true },
+      { text: "O(n log n)", correct: false },
+      { text: "O(1)", correct: false },
+    ]
+  },
+  {
+    question: "How do you declare an array in Java?",
+    answers: [
+      { text: "int[] arr = new int[5];", correct: true },
+      { text: "int arr[] = new int[5];", correct: false },
+      { text: "int arr = new int[5];", correct: false },
+      { text: "int[] arr = 5;", correct: false },
+    ]
+  },
+  {
+    question: "What does DOM stand for in web development?",
+    answers: [
+      { text: "Document Object Model", correct: true },
+      { text: "Dynamic Object Model", correct: false },
+      { text: "Document Object Management", correct: false },
+      { text: "Dynamic Object Manipulation", correct: false },
+    ]
+  }
 ];
 
-import
-
-const q = document.querySelector("p");
+let q = document.querySelector("p");
 const answerBtn = document.querySelector(".op");
 const next_btn = document.querySelector("#next-btn");
-
-console.log("something new")
 
 let currentQuestionIndex = 0;
 let userScore = 0;
@@ -100,12 +150,8 @@ function showQuestion() {
   currentQuestionIndex++;
 }
 
-function newThing() {
-
-}
-
 function handleAns(index, isCorrect) {
-  if (isCorrect == true) {
+  if (isCorrect) {
     userScore++;
     answerBtn.children[index].style.backgroundColor = "green";
   } else {
@@ -120,7 +166,7 @@ function handleAns(index, isCorrect) {
 
 function resetState() {
   for (let i = 0; i < 4; i++) {
-    answerBtn.children[i].backgroundColor = "initial";
+    answerBtn.children[i].style.backgroundColor = "initial";
     answerBtn.children[i].disabled = false;
   }
 }
@@ -132,9 +178,10 @@ next_btn.onclick = function () {
 function yourScore() {
   const qna = document.querySelector(".qna");
   qna.innerHTML = `Your score is: ${userScore}/5`;
-  next_btn.disabled = true;
+  next_btn.innerHTML = "Restart"
+  next_btn.onclick = function () {
+    window.location.reload();
+  }
 }
 
 startQuiz();
-
-console.log("Good is everything")
