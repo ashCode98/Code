@@ -1,12 +1,12 @@
 //
 
-const myObject = {
-    name: "random",
-    age: 20,
-    email: "xyz@googlecloud.com",
-    location: "New York",
-    "Full name": "Prajapati Ashish"
-}
+// const myObject = {
+//     name: "random",
+//     age: 20,
+//     email: "xyz@googlecloud.com",
+//     location: "New York",
+//     "Full name": "Prajapati Ashish"
+// }
 
 // const {location: place} = myObject
 
