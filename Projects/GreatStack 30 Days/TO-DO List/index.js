@@ -19,17 +19,23 @@ add.addEventListener('click', () => {
         closeButton.textContent = "X"
         closeButton.style = "cursor: pointer;border: none; background-color: white; position: absolute;right: 40%;"
 
+        const handleTaskState = () => {
+          let isChecked = false;
+          
+          return () => {
+            isChecked = !isChecked;
+            newImg = isChecked ? "images/checked.png" : "images/unchecked.png";
+            li.style.textDecoration = isChecked ? "line-through" : "none";
+          }
+        } 
+
+        newImg.addEventListener("click", handleTaskState())
+
         li.append(newImg)
         li.append(closeButton)
         ul.appendChild(li)
 
-        newImg.addEventListener("click", () => {
-            newImg.src = "images/checked.png"
-            li.style = "text-decoration: line-through;"
-        })
-
-        closeButton.addEventListener("click", () => {
-            li.remove();
-        })
+        //use of arrow function
+        closeButton.addEventListener("click", () => li.remove())
     }
 })
