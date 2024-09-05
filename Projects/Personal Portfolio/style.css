@@ -1,0 +1,164 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    background: #0A182E;
+    color: white;
+    font-family: "SF Mono";
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+
+nav .left img {
+    width: 65px;
+    height: 65px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+}
+
+nav .right ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 140px;
+}
+
+nav .right li a {
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 650;
+    text-decoration: none;
+    color: #CCD6F6;
+}
+
+nav .right li a:hover {
+    text-decoration: underline;
+    -webkit-transform: translate(10px);
+    -moz-transform: translate(10px);
+    -ms-transform: translate(10px);
+    -o-transform: translate(10px);
+    transform: translate(10px);
+}
+
+.first-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 20px;
+}
+
+.first-section .left-section {
+    width: 55vw;
+}
+
+.first-section .left-section .socials {
+    margin: 2px 10px;
+}
+
+.first-section .left-section .socials img {
+    width: 45px;
+    height: 45px;
+}
+
+.first-section .left-section h3:first-child {
+    color: rgb(17, 255, 188);
+    margin: 20px;
+    left: 0;
+    font-size: 18px;
+}
+
+.first-section .left-section .name {
+    margin: 15px;
+    font-size: 50px;
+    color: #CCD6F6;
+}
+
+.first-section .left-section span {
+    color: rgb(17, 255, 188);
+    font-weight: 800;
+}
+
+.first-section .left-section .after-name {
+    margin: 15px;
+    font-size: 50px;
+    color: #858FAD;
+}
+
+.first-section .left-section .after-name-description {
+    color: #75859e;
+    margin: 20px 17px;
+    font-stretch: semi-expanded;
+    width: 70%;
+    font-family: "Cascadia Code";
+    line-height: 24px;
+}
+
+.first-section .left-section h1:second-child {
+    font-size: 40px;
+}
+
+.first-section .left-section button {
+    padding: 20px 50px;
+    border: 2px solid rgb(8, 115, 85);
+    font-size: 20px;
+    color: rgb(23, 223, 166);
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+    margin: 17.5px;
+    border-radius: 2.5px;
+}
+
+.resume {
+    padding: 8px 16px;
+    border: 2px solid rgb(15, 186, 138);
+    font-size: 17px;
+    color: rgb(23, 223, 166);
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+    margin: 10px;
+    border-radius: 2.5px;
+}
+
+.first-section .right-section img {
+    width: 500px;
+    height: 400px;
+}
+
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    left: 0;
+    -webkit-animation: textclip 2s linear infinite;
+    animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
