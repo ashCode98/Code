@@ -1,0 +1,15 @@
+{
+  "name": "rest-api-for-crud-operation",
+  "version": "1.0.0",
+  "description": "Creating restapi for performing crud operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Ashish Prajapati",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "keywords": []
+}
