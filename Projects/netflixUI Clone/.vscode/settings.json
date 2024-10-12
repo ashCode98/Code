@@ -1,4 +1,7 @@
 {
   "liveServer.settings.multiRootWorkspaceName": "netflixUI Clone",
-  "cSpell.words": ["Skywalker"]
+  "cSpell.words": [
+    "Skywalker"
+  ],
+  "liveServer.settings.port": 5501
 }
