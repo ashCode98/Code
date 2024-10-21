@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBlog</title>
+    <style>
+        :root {
+            --bg-dark: #1a202c;
+            --bg-card: #2d3748;
+            --text-primary: #f7fafc;
+            --text-secondary: #a0aec0;
+            --accent-1: #4fd1c5;
+            --accent-2: #9f7aea;
+            --border-color: #4a5568;
+            --error-color: #f56565;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            color: var(--text-secondary);
+        }
+
+        .search-input {
+            padding: 0.5rem 0.5rem 0.5rem 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+            color: var(--text-primary);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .blog-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .blog-card:hover {
+            border-color: var(--text-secondary);
+        }
+
+        .blog-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-icon {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .blog-card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .blog-card-content {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .blog-card-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-color);
+            padding: 1rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .add-blog-form {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .error-message {
+            color: var(--error-color);
+            margin-top: 0.5rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: var(--bg-card);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            color: var(--text-secondary);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: var(--text-primary);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                margin: 1rem 0;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">TechBlog</div>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search articles...">
+            </div>
+            <button class="btn" id="toggleFormBtn">Add Article</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Latest Articles</h1>
+        <form id="addBlogForm" class="add-blog-form">
+            <input type="hidden" id="blogId">
+            <div class="form-group">
+                <label for="blogTitle">Title:</label>
+                <input type="text" id="blogTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="blogIcon">Icon (emoji):</label>
+                <input type="text" id="blogIcon" required>
+            </div>
+            <div class="form-group">
+                <label for="blogContent">Content:</label>
+                <textarea id="blogContent" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="blogReadTime">Read Time:</label>
+                <input type="text" id="blogReadTime" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn" id="submitBtn">Add Blog Post</button>
+                <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+            </div>
+        </form>
+        <div class="blog-grid" id="blogGrid"></div>
+    </main>
+
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Are you sure you want to delete this blog post?</p>
+            <button id="confirmDelete" class="btn">Delete</button>
+            <button id="cancelDelete" class="btn btn-secondary">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            © 2023 TechBlog. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        let blogPosts = [
+            { id: 1, title: "Introduction to React Hooks", icon: "⚛️", date: "2023-10-15", readTime: "5 min read", content: "React Hooks are a powerful feature that allow you to use state and other React features without writing a class." },
+            { id: 2, title: "Optimizing Database Queries", icon: "🗄️", date: "2023-10-10", readTime: "7 min read", content: "Efficient database queries are crucial for application performance. Learn techniques to optimize your queries." },
+            { id: 3, title: "Building Scalable Microservices", icon: "🖥️", date: "2023-10-05", readTime: "10 min read", content: "Microservices architecture can help you build scalable and maintainable applications. Discover best practices." },
+            { id: 4, title: "Machine Learning Basics", icon: "🧠", date: "2023-09-30", readTime: "8 min read", content: "Get started with machine learning fundamentals and understand key concepts in AI." },
+            { id: 5, title: "Web Security Best Practices", icon: "🔒", date: "2023-09-25", readTime: "6 min read", content: "Protect your web applications from common security threats with these essential best practices." },
+        ];
+
+        function createBlogCard(post) {
+            const card = document.createElement('div');
+            card.className = 'blog-card';
+            card.innerHTML = `
+                <div class="blog-card-header">
+                    <span class="blog-card-icon">${post.icon}</span>
+                    <h2 class="blog-card-title">${post.title}</h2>
+                </div>
+                <div class="blog-card-content">
+                    ${post.content}
+                </div>
+                <div class="blog-card-footer">
+                    <span>${post.date}</span>
+                    <span>${post.readTime}</span>
+                </div>
+                <div class="blog-card-actions">
+                    <button class="btn btn-secondary edit-btn" data-id="${post.id}">Edit</button>
+                    <button class="btn btn-secondary delete-btn" data-id="${post.id}">Delete</button>
+                </div>
+            `;
+            return card;
+        }
+
+        function renderBlogPosts(posts = blogPosts) {
+            const blogGrid = document.getElementById('blogGrid');
+            blogGrid.innerHTML = ''; // Clear existing posts
+            posts.forEach(post => {
+                blogGrid.appendChild(createBlogCard(post));
+            });
+            addEventListeners();
+        }
+
+        function addEventListeners() {
+            document.querySelectorAll('.edit-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => editBlogPost(e.target.dataset.id));
+            });
+            document.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => showDeleteConfirmation(e.target.dataset.id));
+            });
+        }
+
+        function addNewBlogPost(event) {
+            event.preventDefault();
+            const id = document.getElementById('blogId').value;
+            const title = document.getElementById('blogTitle').value;
+            const icon = document.getElementById('blogIcon').value;
+            const content = document.getElementById('blogContent').value;
+            const readTime = document.getElementById('blogReadTime').value;
+            const date = new Date().toISOString().split('T')[0];
+
+            if (id) {
+                // Edit existing post
+                const index = blogPosts.findIndex(post => post.id === parseInt(id));
+                if (index !== -1) {
+                    blogPosts[index] = { ...blogPosts[index], title, icon, content, readTime };
+                }
+            } else {
+                // Add new post
+                const newPost = { id: Date.now(), title, icon, date, readTime, content };
+                blogPosts.unshift(newPost);
+            }
+
+            renderBlogPosts();
+            resetForm();
+            toggleForm();
+        }
+
+        function editBlogPost(id) {
+            const post = blogPosts.find(post => post.id === parseInt(id));
+            if (post) {
+                document.getElementById('blogId').value = post.id;
+                document.getElementById('blogTitle').value = post.title;
+                document.getElementById('blogIcon').value = post.icon;
+                document.getElementById('blogContent').value = post.content;
+                document.getElementById('blogReadTime').value = post.readTime;
+                document.getElementById('submitBtn').textContent = 'Update Blog Post';
+                toggleForm(true);
+            }
+        }
+
+        function showDeleteConfirmation(id) {
+            const modal = document.getElementById('confirmModal');
+            modal.style.display = 'block';
+            document.getElementById('confirmDelete').onclick = () => deleteBlogPost(id);
+            document.getElementById('cancelDelete').onclick = () => modal.style.display = 'none';
+            document.querySelector('.close').onclick = () => modal.style.display = 'none';
+        }
+
+        function deleteBlogPost(id) {
+            blogPosts = blogPosts.filter(post => post.id !== parseInt(id));
+            renderBlogPosts();
+            document.getElementById('confirmModal').style.display = 'none';
+        }
+
+        function toggleForm(show = null) {
+            const form = document.getElementById('addBlogForm');
+            const  btn = document.getElementById('toggleFormBtn');
+            if (show === null) {
+                show = form.style.display === 'none' || form.style.display === '';
+            }
+            form.style.display = show ? 'block' : 'none';
+            btn.textContent = show ? 'Cancel' : 'Add Article';
+            if (!show) {
+                resetForm();
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('addBlogForm').reset();
+            document.getElementById('blogId').value = '';
+            document.getElementById('submitBtn').textContent = 'Add Blog Post';
+        }
+
+        function searchBlogPosts() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filteredPosts = blogPosts.filter(post => 
+                post.title.toLowerCase().includes(searchTerm) || 
+                post.content.toLowerCase().includes(searchTerm)
+            );
+            renderBlogPosts(filteredPosts);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBlogPosts();
+            document.getElementById('addBlogForm').addEventListener('submit', addNewBlogPost);
+            document.getElementById('toggleFormBtn').addEventListener('click', () => toggleForm());
+            document.getElementById('cancelBtn').addEventListener('click', () => toggleForm(false));
+            document.getElementById('searchInput').addEventListener('input', searchBlogPosts);
+        });
+    </script>
+</body>
+</html>
